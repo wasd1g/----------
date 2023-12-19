@@ -1,6 +1,6 @@
 
 body.night-mode {
-    background-color: #161616;
+    background-color: #1B2430;
 }
 
 body,
@@ -12,7 +12,6 @@ label,
 form p {
     transition: all 500ms ease-out;
 }
-
 
 /* For Dark Mode */
 body.night-mode .dark-mode p,
@@ -96,10 +95,51 @@ input[type="radio"] {
     background-color: #740BAD;
 }
 
+.form-wrapper {
+    background-color: #16161671;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
 
 fieldset {
     overflow: hidden;
     position: relative;
+}
+
+a.fork-me {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+a.fork-me i {
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+    right: 7px;
+    transition: all 250ms linear;
+}
+
+a.fork-me::before {
+    content: "";
+    display: block;
+    background-color: #161616b2;
+    width: 100px;
+    height: 150px;
+    transform: skewY(45deg);
+    position: absolute;
+    top: -100px;
+    right: 0;
+    transition: all 250ms linear;
+}
+
+a.fork-me:hover i{
+    color: #1C8BF2;
 }
 
 body.night-mode a.fork-me::before {

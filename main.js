@@ -95,3 +95,10 @@ document.querySelector(".dark-mode-switcher").onclick = function () {
 
   document.body.classList.toggle("night-mode");
 };
+
+// Funkciq za vrushtane nazad i napred
+document.addEventListener("DOMContentLoaded", function(){
+  document.getElementById("backArrow").addEventListener('click', function() {
+      window.location.href = 'headPage.html';
+  });
+});
