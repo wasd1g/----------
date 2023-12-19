@@ -18,7 +18,7 @@
     <main class="container py-5 p-md-5 position-relative">
         <!-- Dark Mode Switcher -->
         <div class="dark-mode d-flex align-items-center ">
-            <p class="m-0 me-2">Dark Mode</p>
+            <p class="m-0 me-2">Тъмен режим</p>
             <div class="dark-mode-switcher rounded d-flex align-items-center">
                 <i class="bi bi-brightness-high-fill"></i>
                 <span></span>
@@ -26,7 +26,21 @@
             </div>
         </div>
 
-        <h1 class="text-center my-4 fw-bold">Моите Записки</h1>
+        <h1 class="text-center my-4 fw-bold" id="moiteZapiski">Моите Записки</h1>
+        
+        <!-- wavy text -->
+        <svg>
+            <filter id="wavy2">
+              <feTurbulence x="0" y="0" baseFrequency="1.019" numOctaves="7" seed="3">
+                
+                <animate attributeName="baseFrequency" dur=".2s" values=".001;.005;.004" repeatCount="indefinite" />
+                
+              </feTurbulence>
+              
+              <feDisplacementMap in="SourceGraphic" scale="40" />
+            </filter>
+          </svg>
+
 
         <fieldset class="border border-1 p-3">
             <legend class="text-center text-decoration-underline">Добави записка</legend>
@@ -37,16 +51,16 @@
                 </div>
     
                 <div>
-                    <label for="description" class="form-label">Description</label>
+                    <label for="description" class="form-label">Описание</label>
                     <textarea id="description" class="form-control fs-5" cols="30" rows="2" maxlength="500"></textarea>
                 </div>
     
                 <div>
-                    <span class="fs-6 text-secondary">*Hint: Use // to insert new lines.</span>
+                    <span class="fs-6 text-secondary">*Използвай // за нов ред.</span>
                 </div>
     
                 <div class="d-md-flex align-items-center my-3">
-                    <p class="me-3 mb-0">Select Note Color: </p>
+                    <p class="me-3 mb-0">Избери цвят: </p>
                     <div>
                         <input type="radio" id="cyan" class="form-check-input me-3" name="bg-color" value="#1C8BF2">
                         <input type="radio" id="orange" class="form-check-input me-3" name="bg-color" value="#EE5E44">
@@ -56,15 +70,15 @@
                 </div>
     
                 <div class="my-3">
-                    <button type="button" id="add" class="btn btn-lg btn-primary px-5">Add</button>
-                    <input type="reset" class="btn btn-lg btn-danger px-5" value="Reset">
+                    <button type="button" id="add" class="btn btn-lg btn-primary px-5">Добави</button>
+                    <input type="reset" class="btn btn-lg btn-danger px-5" value="Изтрий">
                 </div>
             </form>
         </fieldset>
 
         <!-- Notes Container -->
         <hr>
-        <h2 class="text-center">All Notes</h2>
+        <h2 class="text-center">Всички записки</h2>
         <section>
 
         </section>

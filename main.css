@@ -13,6 +13,17 @@ form p {
     transition: all 500ms ease-out;
 }
 
+/* wavy text */
+#moiteZapiski {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* center page with absolute position */
+    top: 10%; left: 50%; transform: translate(-50%, 0);
+    filter: url(#wavy2)
+  }
+
 /* For Dark Mode */
 body.night-mode .dark-mode p,
 body.night-mode h1, 
